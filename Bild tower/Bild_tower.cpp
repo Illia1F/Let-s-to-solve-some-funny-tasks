@@ -6,10 +6,10 @@ class TowerBilder
 {
     int nFloors;
 public:
-    TowerBilder(int nFloors) : nFloors(nFloors)
+    TowerBilder(const int nFloors) : nFloors(nFloors)
     {}
-    void bildTower();
-    inline void reset(int num) { nFloors = num; }
+    void bildTower()const;
+    inline void reset(const int num) { nFloors = num; }
 };
 
 int main()
@@ -22,7 +22,7 @@ int main()
     return 0;
 }
 
-void TowerBilder::bildTower()
+void TowerBilder::bildTower()const
 {
     // check up the number of floors in order to been greater than 0
     if(nFloors < 0)
