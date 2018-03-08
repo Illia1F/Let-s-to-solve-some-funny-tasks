@@ -4,11 +4,11 @@ using namespace std;
 
 class TowerBilder
 {
-    int nFloors;
+    int nFloors; // amount of floors
 public:
     TowerBilder(const int nFloors) : nFloors(nFloors)
     {}
-    void bildTower()const;
+    void bildTower()const; // output the tower on console 
     inline void reset(const int num) { nFloors = num; }
 };
 
@@ -24,7 +24,7 @@ int main()
 
 void TowerBilder::bildTower()const
 {
-    // check up the number of floors in order to been greater than 0
+    // check the number of floors in order to been greater than 0
     if(nFloors < 0)
         throw out_of_range("Error: out of range");
 
